@@ -11,13 +11,17 @@ Background:
         | Per Hegg | per_hegg@hotmail.com | pereriksson | pereriksson           |
 
 
-Scenario: Successfully create an article [Happy Path]
+Scenario: User can successfully login [Happy Path]
 
     When I click on "Login"    
     And I fill in "Email" with "per_hegg@hotmail.com"
     And I fill in "Password" with "pereriksson"
     And I click on "Log in"
     Then I should see "Signed in successfully."
-    # And I should see "Article was successfully created."
-    # And I should see "Learning Rails 5"
-    # And I should see "Excited about learning a new framework"
+
+Scenario: User can't login [Sad Path]
+    Given I click on "Login"
+        When I fill in "Email" with " "
+        And I fill in "Password" with " "
+        And I click on "Log in"
+        Then I should see "Invalid Email or password."
