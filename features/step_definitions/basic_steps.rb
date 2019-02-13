@@ -3,15 +3,11 @@ Given("I visit the site") do
 end
   
 When("I click on {string}") do |string|
-  expect(page).to have_content string
+  click_on string
 end
 
-When("I fill in name with {string}") do |field|
-  expect(field).to have_content field
-end
-
-When("I fill in {string} with {string}") do |field, field2|
-  expect(field).to have_content field
+When("I fill in {string} with {string}") do |field, input|
+  fill_in field, with: input
 end
 
 Then("I click {string}") do |click|
@@ -19,6 +15,6 @@ Then("I click {string}") do |click|
 end
 
 Then("I should see {string}") do |string|
-  expect(string).to have_content string
+  expect(page).to have_content string
 end
 
