@@ -3,7 +3,9 @@ Given("I visit the {string} page") do |string|
 end
 
 Given("The following user exist") do |table|
-    pending # Write code here that turns the phrase above into concrete actions
+    table.hashes.each do |user|
+        User.create!(user)
+    end
 end
 
 When("I click {string} link") do |string|
@@ -17,5 +19,3 @@ end
 When("I click {string} button") do |string|
 pending # Write code here that turns the phrase above into concrete actions
 end
-  
-  
