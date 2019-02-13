@@ -3,17 +3,17 @@ require 'spec_helper'
 
 RSpec.describe User, type: :model do
     describe 'DB table' do
-        it {is_expected.to have_db_column :Name}
-        it {is_expected.to have_db_column :Email}
-        it {is_expected.to have_db_column :Password}
-        it {is_expected.to have_db_column :Password_confirmation}
+        it {is_expected.to have_db_column :name}
+        it {is_expected.to have_db_column :email}
+        it {is_expected.to have_db_column :password}
+        it {is_expected.to have_db_column :password_confirmation}
     end
 
     describe "Validations" do
-        it {is_expected.to validate_presence_of :Name}
-        it {is_expected.to validate_presence_of :Email}
-        it {is_expected.to validate_presence_of :Password}        
-        it {is_expected.to validate_presence_of :Password_confirmation}
+        it {is_expected.to validate_presence_of :name}
+        it {is_expected.to validate_presence_of :email}
+        it {is_expected.to validate_presence_of :password}        
+        it {is_expected.to validate_presence_of :password_confirmation}
     end
 
     describe "Factory" do
@@ -22,5 +22,3 @@ RSpec.describe User, type: :model do
         end
     end
 end
-
-
