@@ -13,3 +13,7 @@ end
 When("I fill in name with {string}") do |field|
   expect(field).to have_content field
 end
+
+When("I fill in {string} with {string}") do |field, field2|
+  expect(field).to have_content field
+end
