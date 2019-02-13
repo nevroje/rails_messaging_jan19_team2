@@ -17,3 +17,7 @@ end
 When("I fill in {string} with {string}") do |field, field2|
   expect(field).to have_content field
 end
+
+Then("I click {string}") do |click|
+  expect(click).to have_content click
+end
