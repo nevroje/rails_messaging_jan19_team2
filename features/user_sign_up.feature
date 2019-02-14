@@ -22,4 +22,4 @@ Scenario: User visits page and Signs up incorrectly [SadPath]
     And I fill in "Password" with "0443431157"
     And I fill in "Password confirmation" with "044343115"
     And I click on "Create"
-    Then I should see "Password confirmation doesn't match Password"
+    Then I should see "Password confirmation doesn't match Password."
