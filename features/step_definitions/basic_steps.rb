@@ -1,4 +1,4 @@
-Given("I visit the {string} page") do |string|
+Given("I visit the landing page") do 
     visit root_path
 end
 
@@ -12,6 +12,8 @@ When("I click on {string}") do |button_name|
     click_on button_name
 end
 
-When("I fill in {string} with {string}") do |user_key, user_value|
-    fill_in user_key, with: user_value
+
+When("I fill in {string} with {string}") do |field, input|
+  fill_in field, with: input
 end
+
